@@ -48,9 +48,9 @@ public class ProjectController {
         }
     }
 
-    @PutMapping("/gardening/{plantId}")
-    public ResponseEntity<Project> update(@PathVariable int id, @RequestBody Project pro) {
-        return new ResponseEntity<>(serv.update(id, pro), HttpStatus.OK);
+    @PutMapping("/gardens/{plantId}")
+    public ResponseEntity<Project> update(@PathVariable int plantId, @RequestBody Project pro) {
+        return new ResponseEntity<>(serv.update(plantId, pro), HttpStatus.OK);
     }
 
     @DeleteMapping("/gardening/{plantId}")

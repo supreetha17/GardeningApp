@@ -29,8 +29,8 @@ public class ProjectService {
         return repo.findById(plantId).orElse(null);
     }
 
-    public Project update(int id, Project pro) {
-        Project pros = repo.findById(id).orElse(null);
+    public Project update(int plantId, Project pro) {
+        Project pros = repo.findById(plantId).orElse(null);
         if (pros != null) {
             pros.setPlantId(pro.getPlantId());
             pros.setPlantName(pro.getPlantName());
@@ -43,8 +43,8 @@ public class ProjectService {
         return pro;
     }
 
-    public boolean delete(int id) {
-        repo.deleteById(id);
+    public boolean delete(int plantId) {
+        repo.deleteById(plantId);
         return true;
     }
 }
